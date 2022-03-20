@@ -1,0 +1,58 @@
+{% extends 'base.html' %} {% load static %} {% block css %} <br />
+<link rel="stylesheet" href="{% static 'styles.css' %}" /> {% endblock css %}<br />
+<br />
+{% block nav %}
+<h2 class="title">New Entry</h2>
+{% endblock nav %} {% block contents %}
+<section>
+    <form action="{% url 'add' %}" method="post">
+        {% csrf_token %} {% for fields in form.as_p %}
+        <div class="form-item">
+            <label for="img">Logo:</label>
+            <input placeholder="img" type="file" />
+        </div>
+        <div class="form-item">
+            <label for="title"> Title:</label>
+            <input placeholder="Title" type="text" name="title" />
+        </div>
+        <div class="form-item">
+            <label for="tag">Tag:</label>
+            <select id="tags" name="tags">
+                {% for tag in tags %}
+                <option value="{{ tag.slug }}">{{tag.name|title}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-item">
+            <label for="details">Details:</label>
+            <textarea
+                name="details"
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="Details"
+            ></textarea>
+        </div>
+        <div class="button">
+            <button class="btn btn-primary" type="submit">Save</button>
+        </div>
+    </form>
+</section>
+{% endblock contents %}
+<br />
+{% block dash_icon_link %} {% url 'home' %}{% endblock dash_icon_link %}
+<br />
+{% block add_icon %}
+<svg
+    id="add_icon"
+    height="512"
+    viewBox="0 0 24 24"
+    width="512"
+    xmlns="http://www.w3.org/2000/svg"
+    data-name="Layer 1"
+>
+    <path
+        d="m12 0a12 12 0 1 0 12 12 12.013 12.013 0 0 0 -12-12zm0 22a10 10 0 1 1 10-10 10.011 10.011 0 0 1 -10 10zm5-10a1 1 0 0 1 -1 1h-3v3a1 1 0 0 1 -2 0v-3h-3a1 1 0 0 1 0-2h3v-3a1 1 0 0 1 2 0v3h3a1 1 0 0 1 1 1z"
+    />
+</svg>
+{% endblock add_icon %}

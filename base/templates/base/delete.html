@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% load static %} {% block css %} <br />
+<link rel="stylesheet" href="{% static 'delete.css' %}" />
+{% endblock css %}<br />
+<br />
+{% block contents %}
+
+<section class="main-section">
+    <div class="delete-form">
+        <h4>Are You Sure You Wanna Delete?</h4>
+        <form action="{% url 'delete' task.id %}" method="post">
+            {% csrf_token %}
+            <a href="{% url 'home' %}">Go Back</a>
+            <button class="btn btn-danger" type="submit">Delete</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

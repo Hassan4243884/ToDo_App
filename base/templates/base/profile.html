@@ -1,0 +1,127 @@
+{% extends 'base.html' %} {% load static %} {% block css %} <br />
+<link rel="stylesheet" href="{% static 'profile.css' %}" />
+{% endblock css %}<br />
+<br />
+{% block nav %}
+<span></span>
+<h2 class="title">Profile</h2>
+<span>
+    <a href="#"
+        ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            id="Outline"
+            viewBox="0 0 24 24"
+            width="512"
+            height="512"
+        >
+            <path
+                d="M12,8a4,4,0,1,0,4,4A4,4,0,0,0,12,8Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,12,14Z"
+            />
+            <path
+                d="M21.294,13.9l-.444-.256a9.1,9.1,0,0,0,0-3.29l.444-.256a3,3,0,1,0-3-5.2l-.445.257A8.977,8.977,0,0,0,15,3.513V3A3,3,0,0,0,9,3v.513A8.977,8.977,0,0,0,6.152,5.159L5.705,4.9a3,3,0,0,0-3,5.2l.444.256a9.1,9.1,0,0,0,0,3.29l-.444.256a3,3,0,1,0,3,5.2l.445-.257A8.977,8.977,0,0,0,9,20.487V21a3,3,0,0,0,6,0v-.513a8.977,8.977,0,0,0,2.848-1.646l.447.258a3,3,0,0,0,3-5.2Zm-2.548-3.776a7.048,7.048,0,0,1,0,3.75,1,1,0,0,0,.464,1.133l1.084.626a1,1,0,0,1-1,1.733l-1.086-.628a1,1,0,0,0-1.215.165,6.984,6.984,0,0,1-3.243,1.875,1,1,0,0,0-.751.969V21a1,1,0,0,1-2,0V19.748a1,1,0,0,0-.751-.969A6.984,6.984,0,0,1,7.006,16.9a1,1,0,0,0-1.215-.165l-1.084.627a1,1,0,1,1-1-1.732l1.084-.626a1,1,0,0,0,.464-1.133,7.048,7.048,0,0,1,0-3.75A1,1,0,0,0,4.79,8.992L3.706,8.366a1,1,0,0,1,1-1.733l1.086.628A1,1,0,0,0,7.006,7.1a6.984,6.984,0,0,1,3.243-1.875A1,1,0,0,0,11,4.252V3a1,1,0,0,1,2,0V4.252a1,1,0,0,0,.751.969A6.984,6.984,0,0,1,16.994,7.1a1,1,0,0,0,1.215.165l1.084-.627a1,1,0,1,1,1,1.732l-1.084.626A1,1,0,0,0,18.746,10.125Z"
+            />
+        </svg>
+    </a>
+</span>
+{% endblock nav %} {% block contents %}
+<section class="tag-sections">
+    <p class="tag-label">Dashboard</p>
+    <div class="tags">
+        <div class="tag">
+            <div class="logo">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    id="logo-img"
+                    data-name="Layer 1"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        d="M18,0H8A5,5,0,0,0,3.424,3H2A1,1,0,0,0,2,5H3V7H2A1,1,0,0,0,2,9H3v2H2a1,1,0,0,0,0,2H3v2H2a1,1,0,0,0,0,2H3v2H2a1,1,0,0,0,0,2H3.424A5,5,0,0,0,8,24H18a5.006,5.006,0,0,0,5-5V5A5.006,5.006,0,0,0,18,0Zm3,19a3,3,0,0,1-3,3H8a3,3,0,0,1-3-3V5A3,3,0,0,1,8,2H18a3,3,0,0,1,3,3Zm-8-7a3,3,0,0,0,0-6A3,3,0,0,0,13,12Zm5,6a1,1,0,0,1-2,0,3,3,0,0,0-6,0,1,1,0,0,1-2,0C8.211,11.392,17.791,11.394,18,18Z"
+                    />
+                </svg>
+            </div>
+            <div class="details">
+                <h4 class="tag-title">{{total}}</h4>
+                <p class="total-tags">
+                    <a href="{% url 'dash' %}">Pending Tasks</a>
+                </p>
+            </div>
+        </div>
+        <div class="tag">
+            <div class="logo">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    id="logo-img"
+                    data-name="Layer 1"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        d="M18,0H8A5,5,0,0,0,3.424,3H2A1,1,0,0,0,2,5H3V7H2A1,1,0,0,0,2,9H3v2H2a1,1,0,0,0,0,2H3v2H2a1,1,0,0,0,0,2H3v2H2a1,1,0,0,0,0,2H3.424A5,5,0,0,0,8,24H18a5.006,5.006,0,0,0,5-5V5A5.006,5.006,0,0,0,18,0Zm3,19a3,3,0,0,1-3,3H8a3,3,0,0,1-3-3V5A3,3,0,0,1,8,2H18a3,3,0,0,1,3,3Zm-8-7a3,3,0,0,0,0-6A3,3,0,0,0,13,12Zm5,6a1,1,0,0,1-2,0,3,3,0,0,0-6,0,1,1,0,0,1-2,0C8.211,11.392,17.791,11.394,18,18Z"
+                    />
+                </svg>
+            </div>
+            <div class="details">
+                <h4 class="tag-title">{{completed}}</h4>
+                <p class="total-tags">
+                    <a href="{% url 'dash-completed' %}">Completed Task</a>
+                </p>
+            </div>
+        </div>
+        <div class="tag">
+            <div class="logo">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    id="logo-img"
+                    data-name="Layer 1"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        d="M18,0H8A5,5,0,0,0,3.424,3H2A1,1,0,0,0,2,5H3V7H2A1,1,0,0,0,2,9H3v2H2a1,1,0,0,0,0,2H3v2H2a1,1,0,0,0,0,2H3v2H2a1,1,0,0,0,0,2H3.424A5,5,0,0,0,8,24H18a5.006,5.006,0,0,0,5-5V5A5.006,5.006,0,0,0,18,0Zm3,19a3,3,0,0,1-3,3H8a3,3,0,0,1-3-3V5A3,3,0,0,1,8,2H18a3,3,0,0,1,3,3Zm-8-7a3,3,0,0,0,0-6A3,3,0,0,0,13,12Zm5,6a1,1,0,0,1-2,0,3,3,0,0,0-6,0,1,1,0,0,1-2,0C8.211,11.392,17.791,11.394,18,18Z"
+                    />
+                </svg>
+            </div>
+            <div class="details">
+                <h4 class="tag-title">{{rate}}</h4>
+                <p class="total-tags"><a href="#">Highest Rate</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="info-section">
+    <div class="info">
+        <div class="info-item">
+            <p>FULL NAME</p>
+            <p class="info-item-detail">Muhammad Hassan</p>
+        </div>
+        <div class="info-item">
+            <p>Email</p>
+            <p class="info-item-detail">hassan.nawaz1232@gmail.com</p>
+        </div>
+        <div class="info-item">
+            <p>Date of Birth</p>
+            <p class="info-item-detail">05 Oct 2022</p>
+        </div>
+    </div>
+</section>
+{% endblock contents %} {% block profile_icon %}
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    version="1.1"
+    id="profile_icon"
+    x="0px"
+    y="0px"
+    viewBox="0 0 512 512"
+    style="enable-background: new 0 0 512 512"
+    xml:space="preserve"
+    width="512"
+    height="512"
+>
+    <g>
+        <circle cx="256" cy="128" r="128" />
+        <path
+            d="M256,298.667c-105.99,0.118-191.882,86.01-192,192C64,502.449,73.551,512,85.333,512h341.333   c11.782,0,21.333-9.551,21.333-21.333C447.882,384.677,361.99,298.784,256,298.667z"
+        />
+    </g>
+</svg>
+{% endblock profile_icon %}

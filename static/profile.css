@@ -1,0 +1,98 @@
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    /* border-bottom: 1px solid grey; */
+    box-shadow: 0px 3px 7px rgba(105, 105, 105, 0.5);
+    padding: 10px;
+}
+
+nav .title {
+    margin-left: 10px;
+}
+
+nav svg {
+    width: 30px;
+    height: 30px;
+}
+
+#profile_icon {
+    fill: whitesmoke;
+}
+
+p {
+    color: var(--secondary);
+    font-size: smaller;
+}
+
+.tag-sections {
+    margin: 20px 0;
+    padding: 20px 0;
+}
+.tag-label {
+    margin-left: 20px;
+}
+.tag-sections .tags {
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+    /* height: 250px; */
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.tag-sections .tags .tag {
+    /* border: 1px solid grey; */
+    border-radius: 10px;
+    width: 30%;
+    padding: 20px 10px;
+    margin: 5px;
+    box-shadow: 0px 3px 7px rgba(105, 103, 103, 0.5);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tag-title {
+    font-weight: bold;
+}
+
+.info-section {
+    margin: 50px 0;
+}
+
+.info-section .info {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info-section .info-item {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+.info-section .info-item p {
+    width: 25%;
+    font-size: small;
+}
+.info-section .info-item .info-item-detail {
+    width: 70%;
+}
+
+.info .info-item-detail {
+    color: var(--white);
+}
+/* .tag .logo {
+    width: 100%;
+} */

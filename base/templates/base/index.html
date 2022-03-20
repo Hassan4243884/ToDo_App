@@ -1,0 +1,34 @@
+{% extends 'base.html' %} {% load static %} {% block css %} <br />
+<link rel="stylesheet" href="{% static 'styles.css' %}" /> {% endblock css %}<br />
+<br />
+{% block nav %}
+<h2 class="title">Home</h2>
+{% endblock nav %} {% block contents %}
+<section class="tag-sections">
+    <p class="tag-label">QUICK CHECKLIST</p>
+    <div class="tags">
+        {% for tag in tags %}
+        <div class="tag">
+            <div class="logo">{{ tag.logo|safe }}</div>
+            <div class="details">
+                <h4 class="tag-title">
+                    <a href="{% url 'dash' %}?q={{tag.slug}}">{{tag.name}}</a>
+                </h4>
+                <p class="total-tags">
+                    {{tag.tasks.count}} Task{{tag.tasks.count|pluralize}}
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<section class="tag-list">
+    <div class="tag-list-head">
+        <p>Latest Tasks</p>
+        <!-- <p class="total-list-tags"></p> -->
+    </div>
+
+    {% include 'base/task-list.html' %}
+</section>
+{% endblock contents %}
+<br />{% block dash_icon_link %} {% url 'dash' %}{% endblock dash_icon_link %}

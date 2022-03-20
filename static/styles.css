@@ -1,0 +1,95 @@
+nav {
+    text-align: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 10px;
+}
+p {
+    font-size: smaller;
+    color: var(--secondary);
+}
+
+.tag-sections {
+    padding: 20px 30px;
+}
+
+.tag-sections .tags {
+    border-radius: 10px;
+    width: 100%;
+    /* height: 250px; */
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+    align-items: center;
+}
+.tag-sections .tags .tag {
+    position: relative;
+    /* border: 1px solid grey; */
+    border-radius: 10px;
+    width: 40%;
+    height: 160px;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.tag-title {
+    font-weight: bold;
+}
+
+.tag-sections .tags .tag .details {
+    position: absolute;
+    top: 115px;
+    left: 0px;
+    width: 100%;
+}
+
+.tag-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tag-list .tag-list-head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    width: 100%;
+}
+.tag-list .tag-list-item {
+    padding: 10px 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    margin: 10px 0;
+    border-radius: 20px;
+}
+.tag-list-item-details {
+    width: 60%;
+}
+
+.tag-list .tag-list-item div {
+    padding-left: 10px;
+    /* width: 50%; */
+}
+.tag-list .tag-list-item .logo {
+    padding: 0;
+}
+.tag-list-item-bio {
+    font-size: small;
+}
+.tag-list-item-title {
+    color: var(--white);
+}
+.total-tags {
+    font-size: small;
+}
+.tag-list p {
+    color: var(--white);
+}
